@@ -5,21 +5,21 @@
 class PiholeTui < Formula
   desc "TUI for managing Pi-hole remotely"
   homepage "https://github.com/rodrigodealer/pihole-tui"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.1.0/pihole-tui_0.1.0_darwin_amd64.tar.gz"
-      sha256 "4b80141ce57a26f3ad639dd229723ae3d5a511d0aac1f7b361ebfaccb266a2b7"
+      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.2.0/pihole-tui_0.2.0_darwin_amd64.tar.gz"
+      sha256 "d160cbdf23db53d6da578a55ba6aaf2b422728d3cee96629334bbdc66a8c4914"
 
       define_method(:install) do
         bin.install "pihole-tui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.1.0/pihole-tui_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f47bca440422a703551e9bacd7aaccd1b67d59cd070722a1d9e707f3f7349249"
+      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.2.0/pihole-tui_0.2.0_darwin_arm64.tar.gz"
+      sha256 "cdfcd3ce88d63404ea8ef31f619e962abbf9749ad5bda328b1ef0510f23e0416"
 
       define_method(:install) do
         bin.install "pihole-tui"
@@ -29,15 +29,15 @@ class PiholeTui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.1.0/pihole-tui_0.1.0_linux_amd64.tar.gz"
-      sha256 "8cec9752c16d9d8ab5d1814f7e2deeb8783dd84d9699a0a01577c23ba2603eb3"
+      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.2.0/pihole-tui_0.2.0_linux_amd64.tar.gz"
+      sha256 "3d970f321cd20c12e2ace3373fb628a9b4cdbee2c7ee39989f48b469069b9ba1"
       define_method(:install) do
         bin.install "pihole-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.1.0/pihole-tui_0.1.0_linux_arm64.tar.gz"
-      sha256 "1f1b1c0b9c5b94a2127a71d5aee9c65a07858842e59bf0390e862ec1e947da2d"
+      url "https://github.com/rodrigodealer/pihole-tui/releases/download/v0.2.0/pihole-tui_0.2.0_linux_arm64.tar.gz"
+      sha256 "b9ebef4ff93cd3e1c76631d59abb311b4eed374ce6a06917722b44f58315e772"
       define_method(:install) do
         bin.install "pihole-tui"
       end
